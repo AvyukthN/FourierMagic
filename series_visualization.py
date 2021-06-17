@@ -30,7 +30,9 @@ def main():
         x = 0
         y = 0
 
-        for i in range(8):
+        num = 10
+
+        for i in range(num):
             prevx = x
             prevy = y
 
@@ -43,7 +45,7 @@ def main():
             pygame.draw.circle(screen, pygame.Color(97, 97, 97), (prevx + (tran1), prevy + (HEIGHT/2)), radius, width = 1)
             pygame.draw.line(screen, "white", (prevx + (tran1), prevy + (HEIGHT/2)), ((x + (tran1)), (y + (HEIGHT/2))), width = 2)
             # pygame.draw.circle(screen, "blue", ((x + (WIDTH/2)), (y + (HEIGHT/2))), 5, width = 0)
-            if i == 4:
+            if i == (num - 1):
                 pygame.draw.line(screen, "white", ((x + tran1), (y + (HEIGHT/2))), (wave_start, y + (HEIGHT/2)), width = 2)
 
         wave.insert(0, y)
